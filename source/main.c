@@ -64,8 +64,13 @@ int main(void) {
 	while(1) {
 		swiWaitForVBlank();
 		lcdMainOnBottom();
+        scanKeys();
+        int pressed = keysDown();
+        if(pressed & KEY_START) break;
+        if((pressed & KEY_SELECT) && lost){
+            goto reset;
+        }
 		if(!lost){
-			scanKeys();
 			int held = keysHeld();
 			if((held & KEY_TOUCH) && !(lost)){
 				touchRead(&touchXY);
@@ -74,11 +79,6 @@ int main(void) {
 				playerPos.y -= 1;
 			}else if(held & KEY_DOWN){
 				playerPos.y += 1;
-			}
-			int pressed = keysDown();
-			if(pressed & KEY_START) break;
-			if((pressed & KEY_SELECT) && lost){
-				goto reset;
 			}
 		}
 
