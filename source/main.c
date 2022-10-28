@@ -80,6 +80,12 @@ int main(void) {
 			}else if(held & KEY_DOWN){
 				playerPos.y += 1;
 			}
+            if(playerPos.y > 192){
+                playerPos.y = 192;
+            }
+            if(playerPos.y < 0){
+                playerPos.y = 0;
+            }
 		}
 
 		playerRect.x1 = playerPos.x - 2;
