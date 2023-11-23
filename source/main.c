@@ -1,6 +1,6 @@
 /*---------------------------------------------------------------------------------
 
-	Paddle by jacobo
+	Paddle by jacoba
 	Copyright 2022
 	No Rights Reserved.
 	If you need a licence, this game uses the Unlicence
@@ -58,7 +58,7 @@ void init(void){
 	glScreen2D();
 	consoleDemoInit();
 	irqSet(IRQ_VBLANK, Vblank);
-	iprintf("PADDLE by jacobo\nCopyright 2022\nNo Rights Reserved\n\n");
+	iprintf("PADDLE by jacoba\nCopyright 2022\nNo Rights Reserved\n\n");
 	iprintf("How to Play:\n");
 	iprintf("Drag stylus on bottom screen to move paddle up and down.\n");
 	iprintf("Keep the ball from touching the left side of the screen.\n");
